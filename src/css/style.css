@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+/* Root */
+:root {
+  --bg: #31304a;
+  --bg2: #454460;
+  --border: #8f768b;
+  --hover: #cba2a5;
+  --text: #a6a6ba;
+
+  --purpleFade: #7c3aed;
+  --pinkFade: #da62c4;
+}
+
+/* html elements */
+footer {
+  position: relative;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  background-color: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+div {
+  display: block;
+}
+svg {
+  display: flex;
+  fill: currentcolor;
+}
+a {
+  word-wrap: break-word;
+  text-decoration: none;
+  color: #a6a6ba;
+  cursor: pointer;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  height: 59px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--bg2);
+  border-bottom: 3px solid var(--border);
+  box-shadow: 0 10px 12px #0003;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  color: #a6a6ba;
+}
+
+/* (Navbar) Home button */
+.homeBtn {
+  color: #fff;
+  padding: 20px 20px;
+}
+.homeBtn:hover {
+  background-color: var(--hover);
+}
+.homeBtn:hover > svg {
+  color: var(--bg);
+}
+
+/* (Navbar) mods & tools buttons */
+.navbarBtn {
+  display: flex;
+  align-items: center;
+  padding: 14px 16px;
+}
+.navbarBtn svg {
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.navbarBtn:hover {
+  color: var(--bg);
+  background-color: var(--hover);
+}
+
+/* (Navbar) Sign-in button */
+.signInBtn {
+  padding: 20px 20px;
+  margin-left: auto;
+}
+.signInBtn:hover {
+  background-color: var(--hover);
+}
+.signInBtn:hover > svg {
+  color: var(--bg);
+}
+
+/* --- Main Content ---*/
+.mainContent {
+  height: 100%;
+}
+
+/* --- Footer --- */
+.footer {
+  background-color: var(--bg2);
+  border-top: 3px solid var(--border);
+  color: var(--text);
+  box-shadow: 0 -10px 12px #0003;
+  padding: 1rem;
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* (Footer) Animated Text */
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+.animatedText {
+  animation: background-pan 2s linear infinite;
+  display: inline;
+  background: linear-gradient(
+    to right,
+    var(--purpleFade),
+    var(--pinkFade),
+    var(--purpleFade)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
