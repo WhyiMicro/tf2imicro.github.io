@@ -36,7 +36,6 @@ body {
     color: var(--text);
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 main {
     flex: 1;
@@ -53,12 +52,6 @@ a {
     text-decoration: none;
     color: #a6a6ba;
     cursor: pointer;
-}
-/* --- App properties --- */
-.app {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 /* --- Navigation Bar --- */
@@ -119,6 +112,7 @@ a {
 /* --- Main Content ---*/
 .mainContent {
     height: 100%;
+    flex: 1;
 }
 
 /* --- Footer --- */
