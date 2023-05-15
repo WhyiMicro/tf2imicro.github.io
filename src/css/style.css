@@ -31,11 +31,14 @@ body {
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+    font-weight: 400;
     line-height: 1.75rem;
     background-color: var(--bg);
     color: var(--text);
     display: flex;
     flex-direction: column;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
 }
 main {
     flex: 1;
@@ -124,8 +127,13 @@ a {
     padding: 1rem;
     margin-top: 3.5rem;
     display: flex;
+    align-items: flex-end;
     justify-content: space-between;
-    align-items: center;
+    text-align: center;
+}
+.text-small {
+    font-size: 14px;
+    line-height: 18px;
 }
 /* (Footer) Animated Text */
 @keyframes background-pan {
